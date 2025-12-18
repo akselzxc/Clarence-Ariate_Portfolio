@@ -56,8 +56,6 @@ body {
   object-fit: contain;
 }
 
-
-
 nav {
   position: fixed;
   top: 0;
@@ -73,11 +71,9 @@ nav {
   z-index: 1000;
 }
 
-
-
-/* nav.hide {
+nav.hide {
   transform: translateY(-100%);
-} */
+}
 
 nav ul {
   list-style: none;
@@ -1388,6 +1384,11 @@ nav a:hover::after {
   /* ===== NAVBAR ===== */
   nav {
     padding: 1rem 1.2rem;
+    transform: translateY(0) !important;
+  }
+
+  nav {
+    display: none;
   }
 
   .nav-links {
