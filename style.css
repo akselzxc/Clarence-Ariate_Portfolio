@@ -1446,6 +1446,10 @@ nav a:hover::after {
     flex-wrap: wrap;
   }
 
+  .badge {
+    margin-bottom: 0;
+  }
+
   /* ===== STATS ===== */
   .stats {
     grid-template-columns: 1fr 1fr;
