@@ -1324,7 +1324,7 @@ nav a:hover::after {
 @media (max-width: 768px) {
   /* ===== GLOBAL ===== */
   main {
-    margin-top: 25px;
+    margin-top: 10px;
   }
 
   section {
@@ -1347,6 +1347,10 @@ nav a:hover::after {
   }
 
   nav {
+    display: none;
+  }
+
+  #scroll-progress {
     display: none;
   }
 
