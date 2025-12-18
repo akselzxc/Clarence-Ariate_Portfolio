@@ -1365,7 +1365,7 @@ nav a:hover::after {
 
   /* ===== GLOBAL ===== */
   main {
-    margin-top: 80px;
+    margin-top: 20px; /* ✅ REMOVE NAV SPACE */
   }
 
   section {
@@ -1374,7 +1374,7 @@ nav a:hover::after {
   }
 
   h2 {
-    font-size: 2rem !important;
+    font-size: 2rem;
   }
 
   p {
@@ -1383,13 +1383,10 @@ nav a:hover::after {
 
   /* ===== NAVBAR ===== */
   nav {
-    padding: 1rem 1.2rem;
-    transform: translateY(0) !important;
+    display: none; /* ✅ fully hidden */
   }
+}
 
-  nav {
-    display: none;
-  }
 
   .nav-links {
     position: fixed;
@@ -1429,6 +1426,7 @@ nav a:hover::after {
     flex-direction: column;
     text-align: center;
     padding: 10px 6%;
+    gap: 2rem;
   }
 
   .hero-content h1 {
