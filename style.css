@@ -1365,7 +1365,7 @@ nav a:hover::after {
 
   /* ===== GLOBAL ===== */
   main {
-    margin-top: 20px; /* ✅ REMOVE NAV SPACE */
+    margin-top: 25px;
   }
 
   section {
@@ -1374,7 +1374,7 @@ nav a:hover::after {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
 
   p {
@@ -1383,10 +1383,13 @@ nav a:hover::after {
 
   /* ===== NAVBAR ===== */
   nav {
-    display: none; /* ✅ fully hidden */
+    padding: 1rem 1.2rem;
+    transform: translateY(0) !important;
   }
-}
 
+  nav {
+    display: none;
+  }
 
   .nav-links {
     position: fixed;
