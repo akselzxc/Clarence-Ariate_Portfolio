@@ -1,3 +1,11 @@
+.social-icon img {
+  width: 24px;      /* adjust size */
+  height: 24px;
+  border-radius: 100%;
+  object-fit: contain;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -960,23 +968,44 @@ nav a:hover::after {
 
 /* GRID */
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  column-count: 3;          /* desktop */
+  column-gap: 24px;
 }
 
-.gallery-grid img {
+.gallery-grid img,
+.gallery-grid video {
   width: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin-bottom: 24px;
+  break-inside: avoid;      /* 🔑 prevents splitting */
+  border-radius: 16px;
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+/* SMALL GALLERIES */
+.gallery-grid.few-items {
+  column-count: unset;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
 }
+
+.gallery-grid.few-items img,
+.gallery-grid.few-items video {
+  max-width: 420px;
+}
+
+
+.gallery-grid img,
+.gallery-grid video {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover,
+.gallery-grid video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
 
 /* Testimonials */
 
@@ -1536,6 +1565,10 @@ nav a:hover::after {
 
   .footer-links {
     gap: 18px;
+  }
+
+  .gallery-grid {
+    column-count: 1;
   }
 }
 
